@@ -1,0 +1,31 @@
+<form>
+    <div class="justify-content-center">
+        <h1>Alterar Aluno</h1>
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label" >Nome</label>
+      <input class="form-control" type="text" placeholder="Nome" aria-label="default input example" [(ngModel)]="student.name" name="name">
+    </div>
+   
+    <div class="mb-3">
+      <label for="name" class="form-label">RU</label>
+      <input class="form-control" type="text" placeholder="RU" aria-label="default input example" [(ngModel)]="student.ru" name="ru">
+    </div>
+   
+    <div class="mb-3">
+      <label for="name" class="form-label">Curso</label>
+      <input class="form-control" type="text" placeholder="Curso" aria-label="default input example" [(ngModel)]="student.curso" name="curso">
+    </div>
+   
+    <div class="mb-3">
+      <label for="name" class="form-label">Data Nacimento</label>
+      <input class="form-control" type="text" placeholder="Data de nascimento" aria-label="default input example" [(ngModel)]="student.dataN" name="dataN">
+    </div>
+   
+    <button class="btn btn-primary" type="submit" (click)="updateStudent()">
+        Alterar
+    </button>
+    <button class="btn btn-danger ms-2" type="submit" (click)="cancel()">
+        Cancelar
+    </button>
+  </form>

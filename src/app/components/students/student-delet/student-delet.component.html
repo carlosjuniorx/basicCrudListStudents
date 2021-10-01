@@ -1,0 +1,27 @@
+<form>
+    <div class="justify-content-center">
+        <h1>Excluir Aluno</h1>
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label" >{{student.name}}</label>
+    </div>
+   
+    <div class="mb-3">
+      <label for="name" class="form-label">{{student.ru}}</label>
+    </div>
+   
+    <div class="mb-3">
+      <label for="name" class="form-label">{{student.curso}}</label>
+    </div>
+   
+    <div class="mb-3">
+      <label for="name" class="form-label">{{student.dataN}}</label>
+    </div>
+   
+    <button class="btn btn-danger" type="submit" (click)="deleteStudent()">
+        Excluir
+    </button>
+    <button class="btn btn-primary ms-2" type="submit" (click)="cancel()">
+        Cancelar
+    </button>
+  </form>

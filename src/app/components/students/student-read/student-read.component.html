@@ -1,0 +1,43 @@
+
+<div class="container-fluid">
+
+    <table class="table table-hove text-light">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">nome</th>
+                <th scope="col">ru</th>
+                <th scope="col">curso</th>
+                <th scope="col">Data Nasc.</th>
+                <th scope="col" >Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr tr *ngFor="let student of students | slice: (page-1) * pageSize : page * pageSize">
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.ru}}</td>
+                <td>{{student.curso}}</td>
+                <td>{{student.dataN}}</td>
+                <td>
+                <a routerLink="/students/update/{{student.id}}">
+                    <i class="material-icons">
+                        edit
+                    </i>
+                </a>
+                <a routerLink="/students/delet/{{student.id}}">
+                    <i class="material-icons text-danger ms-3">
+                        delete
+                    </i>
+                </a>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+    <ngb-pagination class="d-flex justify-content-center"
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="total"
+    
+><ng-template ngbPaginationNumber let-page>{{ page }}</ng-template></ngb-pagination>
+</div>
