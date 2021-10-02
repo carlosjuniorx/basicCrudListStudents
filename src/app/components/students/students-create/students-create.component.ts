@@ -28,6 +28,7 @@ export class StudentsCreateComponent implements OnInit {
     this.studentsService.create(this.student)
       this.studentsService.showMenssage('Aluno criado')
       this.router.navigate(['/students'])  
+      console.log('oi')
   }
   cancel(): void {
     this.router.navigate(['/students'])

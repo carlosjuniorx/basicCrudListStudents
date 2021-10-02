@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import {MatSnackBar}from'@angular/material/snack-bar'
 import { Observable } from 'rxjs';
 import { Student } from './students.model';
-//import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 
 
 
@@ -14,9 +14,10 @@ import { Student } from './students.model';
 })
 export class StudentsService {
 
-  baseUrl = "http://localhost:3001/listaAlunos"
+  baseUrl = "https://my-json-server.typicode.com/carlosjuniorx/testApi/listaAlunos"
 
-  constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
+  constructor(private snackBar: MatSnackBar,
+     private http: HttpClient) { }
 
   showMenssage(msg: string): void{
     this.snackBar.open(msg,'X',{
@@ -25,6 +26,7 @@ export class StudentsService {
       verticalPosition: "top"
     })
   }
+
 
   create(student: Student): Observable<Student>{
     return this.http.post<Student>(this.baseUrl, student)

@@ -28,11 +28,14 @@ import { MatSortModule } from '@angular/material/sort';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { StudentUpdateComponent } from './components/students/student-update/student-update.component';
 import { StudentDeletComponent } from './components/students/student-delet/student-delet.component'
-/* import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
-import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
- */
+
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,11 +64,11 @@ import { environment } from '../environments/environment';
     MatPaginatorModule,
     MatSortModule,
     NgbModule,
-/*     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestore,
-    AngularFireAnalyticsModule,
+    AngularFireModule.initializeApp(environment.firebase),
 
- */
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
