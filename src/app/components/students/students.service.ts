@@ -14,7 +14,7 @@ import { Student } from './students.model';
 })
 export class StudentsService {
 
-  baseUrl = "https://my-json-server.typicode.com/carlosjuniorx/testApi/listaAlunos"
+  baseUrl = "http://localhost:3001/listaAlunos"
 
   constructor(private snackBar: MatSnackBar,
      private http: HttpClient) { }
